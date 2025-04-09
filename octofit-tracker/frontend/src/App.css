@@ -1,3 +1,62 @@
+body {
+  background-color: #f8f9fa; /* Light gray background */
+  color: #343a40; /* Dark gray text */
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #007bff; /* Bootstrap primary blue */
+}
+
+.navbar-brand, .nav-link {
+  color: #ffffff !important; /* White text for navigation */
+}
+
+.nav-link:hover {
+  color: #ffc107 !important; /* Yellow on hover */
+}
+
+h1 {
+  color: #007bff; /* Bootstrap primary blue */
+}
+
+table {
+  background-color: #ffffff; /* White table background */
+  border: 1px solid #dee2e6; /* Light gray border */
+}
+
+table th {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: #ffffff; /* White text */
+}
+
+table td {
+  color: #343a40; /* Dark gray text */
+}
+
+button {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.favicon {
+  width: 32px;
+  height: 32px;
+}
+
 .App {
   text-align: center;
 }
