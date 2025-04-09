@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-7(e0!=3!u$v_9%7@w92m9!969uj*rv64&#%5ja#k1&@crb1u71
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ideal-capybara-gr4v9vgw547396jj-8000.app.github.dev']
+ALLOWED_HOSTS = ['ideal-capybara-gr4v9vgw547396jj-8000.app.github.dev', 'localhost', '127.0.0.1']
 
 
 # Application definition
