@@ -6,7 +6,10 @@ function Teams() {
   useEffect(() => {
     fetch('https://ideal-capybara-gr4v9vgw547396jj-8000.app.github.dev/api/teams')
       .then(response => response.json())
-      .then(data => setTeams(data));
+      .then(data => {
+        console.log('Fetched teams:', data); // Debugging log
+        setTeams(data)
+    });
   }, []);
 
   return (
@@ -21,8 +24,8 @@ function Teams() {
         </thead>
         <tbody>
           {teams.map(team => (
-            <tr key={team.id}>
-              <td>{team.id}</td>
+            <tr key={team._id}>
+              <td>{team._id}</td>
               <td>{team.name}</td>
             </tr>
           ))}

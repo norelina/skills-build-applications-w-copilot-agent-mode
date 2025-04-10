@@ -6,7 +6,10 @@ function Activities() {
   useEffect(() => {
     fetch('https://ideal-capybara-gr4v9vgw547396jj-8000.app.github.dev/api/activities')
       .then(response => response.json())
-      .then(data => setActivities(data));
+      .then(data => {
+        console.log('Fetched activities:', data);
+        setActivities(data);
+      })
   }, []);
 
   return (
@@ -21,9 +24,9 @@ function Activities() {
         </thead>
         <tbody>
           {activities.map(activity => (
-            <tr key={activity.id}>
-              <td>{activity.id}</td>
-              <td>{activity.name}</td>
+            <tr key={activity._id}>
+              <td>{activity._id}</td>
+              <td>{activity.activity_type}</td>
             </tr>
           ))}
         </tbody>

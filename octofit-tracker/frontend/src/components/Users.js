@@ -3,10 +3,14 @@ import React, { useEffect, useState } from 'react';
 function Users() {
   const [users, setUsers] = useState([]);
 
+  // Log the fetched data to the console for debugging
   useEffect(() => {
     fetch('https://ideal-capybara-gr4v9vgw547396jj-8000.app.github.dev/api/users')
       .then(response => response.json())
-      .then(data => setUsers(data));
+      .then(data => {
+        console.log('Fetched users:', data); // Debugging log
+        setUsers(data);
+      });
   }, []);
 
   return (
@@ -21,9 +25,9 @@ function Users() {
         </thead>
         <tbody>
           {users.map(user => (
-            <tr key={user.id}>
-              <td>{user.id}</td>
-              <td>{user.name}</td>
+            <tr key={user._id}>
+              <td>{user._id}</td>
+              <td>{user.username}</td>
             </tr>
           ))}
         </tbody>

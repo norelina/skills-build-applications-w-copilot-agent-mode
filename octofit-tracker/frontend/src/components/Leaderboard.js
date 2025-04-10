@@ -6,7 +6,10 @@ function Leaderboard() {
   useEffect(() => {
     fetch('https://ideal-capybara-gr4v9vgw547396jj-8000.app.github.dev/api/leaderboard')
       .then(response => response.json())
-      .then(data => setLeaderboard(data));
+      .then(data => {
+        console.log('Fetched leaderboard:', data); // Debugging log
+        setLeaderboard(data)
+      });
   }, []);
 
   return (
@@ -22,9 +25,9 @@ function Leaderboard() {
         </thead>
         <tbody>
           {leaderboard.map(entry => (
-            <tr key={entry.id}>
-              <td>{entry.id}</td>
-              <td>{entry.name}</td>
+            <tr key={entry._id}>
+              <td>{entry._id}</td>
+              <td>{entry.user.username}</td>
               <td>{entry.score}</td>
             </tr>
           ))}
